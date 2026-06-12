@@ -1,0 +1,67 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+   body {
+    background-color: #f8fafc; /* Fundo cinza-azululado bem moderno e limpo */
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #334155; /* Cor do texto suave */
+    line-height: 1.7;
+    max-width: 850px; /* Largura ideal para leitura */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   2. ELEMENTOS DE TEXTO E TÍTULOS
+   ========================================================================== */
+h1 {
+    color: #1e3a8a;
+    font-size: 38px;
+    text-align: center;
+    border-bottom: 4px solid #3b82f6;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #2563eb;
+    font-size: 24px;
+    margin-top: 50px;
+    border-left: 5px solid #2563eb; /* Linha vertical estilosa ao lado do título */
+    padding-left: 10px;
+}
+
+h3, h4, h5 {
+    color: #475569;
+    margin-top: 20px;
+}
+
+/* Deixa os parágrafos com uma leitura agradável */
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Links */
+a {
+    color: #2563eb;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Mostra o sublinhado só quando passa o mouse */
+}
+
+/* ==========================================================================
+   3. BLOCOS DE CÓDIGO (Tags <code> e <pre>)
+   ========================================================================== */
+pre {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto; /* Adiciona barra de rolagem se o código for muito comprido */
+}
+
+code
