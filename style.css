@@ -1,67 +1,146 @@
-/* ==========================================================================
-   1. CONFIGURAÇÕES GERAIS
-   ========================================================================== */
-   body {
-    background-color: #f8fafc; /* Fundo cinza-azululado bem moderno e limpo */
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    color: #334155; /* Cor do texto suave */
-    line-height: 1.7;
-    max-width: 850px; /* Largura ideal para leitura */
-    margin: 40px auto;
-    padding: 0 20px;
+/* Configurações Gerais e Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* ==========================================================================
-   2. ELEMENTOS DE TEXTO E TÍTULOS
-   ========================================================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333333;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Títulos (Hierarquia e Cores) */
 h1 {
-    color: #1e3a8a;
-    font-size: 38px;
-    text-align: center;
-    border-bottom: 4px solid #3b82f6;
-    padding-bottom: 15px;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
     margin-bottom: 30px;
 }
 
 h2 {
-    color: #2563eb;
-    font-size: 24px;
-    margin-top: 50px;
-    border-left: 5px solid #2563eb; /* Linha vertical estilosa ao lado do título */
+    color: #34495e;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
     padding-left: 10px;
+    border-left: 5px solid #3498db;
 }
 
 h3, h4, h5 {
-    color: #475569;
-    margin-top: 20px;
+    color: #16a085;
+    margin: 15px 0;
 }
 
-/* Deixa os parágrafos com uma leitura agradável */
+/* Parágrafos e Textos */
 p {
-    font-size: 16px;
     margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555555;
     text-align: justify;
 }
 
-/* Links */
-a {
-    color: #2563eb;
+/* Listas (Sumário e Exemplos) */
+ol, ul {
+    margin-bottom: 25px;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+/* Tags de código (Elemento <code> e <pre>) */
+code {
+    background-color: #eef2f5;
+    color: #e74c3c;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    font-size: 0.95rem;
+}
+
+pre {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border-left: 4px solid #e74c3c;
+}
+
+pre code {
+    background-color: transparent;
+    color: #ecf0f1;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* Tabelas Estilizadas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+td, th {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+    transition: background-color 0.2s ease;
+}
+
+/* Imagens */
+img {
+    display: block;
+    max-width: 250px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Links (Botão elegante) */
+a {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #3498db;
+    padding: 10px 20px;
     text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-top: 10px;
 }
 
 a:hover {
-    text-decoration: underline; /* Mostra o sublinhado só quando passa o mouse */
+    background-color: #2980b9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
 }
-
-/* ==========================================================================
-   3. BLOCOS DE CÓDIGO (Tags <code> e <pre>)
-   ========================================================================== */
-pre {
-    background-color: #1e1e1e;
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto; /* Adiciona barra de rolagem se o código for muito comprido */
-}
-
-code
