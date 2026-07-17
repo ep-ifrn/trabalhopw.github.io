@@ -5,14 +5,13 @@
     box-sizing: border-box;
 }
 
+/* Ajuste no body para remover a limitação antiga, transferindo-a para o container */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background-color: #f4f7f6;
     color: #333333;
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: 0 auto;
+    padding: 20px 0; /* Espaço apenas em cima e embaixo, as laterais ficam com o container */
 }
 
 /* Títulos (Hierarquia e Cores) */
@@ -143,4 +142,76 @@ a:hover {
     background-color: #2980b9;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transform: translateY(-2px);
+}
+
+/* --- NOVAS REGRAS: ARQUITETURA GLOBAL E FLEXBOX --- */
+
+/* 1. O Contêiner Global */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza a caixa na tela */
+    background-color: #ffffff; /* Fundo branco para destacar do body cinza */
+    padding: 40px; /* Respiro interno do site todo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Leve sombra (opcional) */
+    border-radius: 8px;
+}
+
+/* 2. Cabeçalho Flexível com Flexbox */
+.topo-site {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o logo e os textos */
+    gap: 30px; /* Cria um espaço entre a imagem e os títulos */
+    margin-bottom: 40px;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 20px;
+}
+
+/* Redefinindo imagem e h1 apenas dentro do topo-site para não quebrar o layout */
+.topo-site img {
+    margin: 0; 
+    max-width: 150px; /* Tamanho ajustado para o cabeçalho */
+}
+
+.topo-site h1 {
+    border-bottom: none; /* Remove a borda antiga, pois passamos para o header */
+    margin-bottom: 5px;
+    padding-bottom: 0;
+}
+
+
+/* --- NOVAS REGRAS: FORMULÁRIO (CLASSES E IDs) --- */
+
+/* 3. Classe do formulário: Box model (Padding e Margin) */
+.caixa-contato {
+    background-color: #f5f5f5; 
+    border: 2px solid #2e7d32;
+    padding: 20px; /* Espaço interno para respiro */
+    margin-bottom: 30px; /* Afasta o rodapé para baixo */
+}
+
+/* 4. ID Exclusivo do Botão */
+#btn-enviar {
+    background-color: #2e7d32; /* Fundo verde institucional */
+    color: #ffffff;            
+    border: none;              
+    padding: 10px 20px;        /* Padding do botão */
+    cursor: pointer;           
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#btn-enviar:hover {
+    background-color: #1b5e20; /* Efeito visual ao passar o mouse */
+}
+
+/* 5. Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    color: #777;
 }
